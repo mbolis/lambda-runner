@@ -7,6 +7,7 @@ import static java.util.stream.Collectors.toList;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Option {
@@ -31,5 +32,10 @@ public class Option {
 
 	public List<Param> getParams() {
 		return unmodifiableList(params);
+	}
+
+	@Override
+	public String toString() {
+		return method.getName() + "\n\t" + params.stream().map(Object::toString).collect(Collectors.joining("\n\t"));
 	}
 }

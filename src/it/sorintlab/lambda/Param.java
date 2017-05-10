@@ -16,4 +16,9 @@ public class Param {
 	public String getSource() {
 		return source;
 	}
+	
+	@Override
+	public String toString() {
+		return source + " : " + type;
+	}
 }

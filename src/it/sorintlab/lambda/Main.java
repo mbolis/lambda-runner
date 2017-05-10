@@ -140,6 +140,8 @@ public class Main {
 			return;
 		}
 
+		//options.forEach(System.out::println);
+		
 		try (InputStreamReader reader = new InputStreamReader(System.in);
 				BufferedReader in = new BufferedReader(reader)) {
 
